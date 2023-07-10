@@ -1,0 +1,15 @@
+<dx-data-grid height="100%"
+              [dataSource]="products"
+              [renderAsync]="true"
+              [remoteOperations]="false"
+              [allowColumnReordering]="true"
+              [rowAlternationEnabled]="true"
+              [showBorders]="true">
+    <dxo-header-filter [visible]="true"></dxo-header-filter>
+    <dxo-scrolling mode="virtual"></dxo-scrolling>
+    <dxi-column dataField="title"></dxi-column>
+    <dxi-column dataField="price" dataType="number" format="currency"></dxi-column>
+    <dxi-column dataField="rating"></dxi-column>
+    <dxi-column dataField="category"></dxi-column>
+    <dxi-column dataField="brand"></dxi-column>
+</dx-data-grid>

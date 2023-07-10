@@ -1,0 +1,14 @@
+footer,
+header {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  background-color: #ccc;
+}
+
+main {
+  height: calc(100% - 100px);
+  padding: 8px;
+}
