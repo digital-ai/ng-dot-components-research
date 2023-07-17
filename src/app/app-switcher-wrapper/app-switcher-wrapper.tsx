@@ -31,15 +31,16 @@ export class CustomReactComponentWrapperComponent implements OnChanges, OnDestro
             name: 'Continuous Testing'
         }
 
+        const args = {
+            open: true,
+        }
+
         ReactDOM.render(
-            <React.StrictMode>
-                <DotThemeProvider>
-                    <DotAppSwitcher activeApp={activeApp}/>
-                </DotThemeProvider>
-            </React.StrictMode>
+            <DotThemeProvider>
+                <DotAppSwitcher activeApp={activeApp} {...args}/>
+            </DotThemeProvider>
             ,
             this.containerRef.nativeElement
-        )
-        ;
+        );
     }
 }
