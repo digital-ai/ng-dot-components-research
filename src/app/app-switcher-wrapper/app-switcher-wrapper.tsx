@@ -1,7 +1,8 @@
 import {AfterViewInit, Component, ElementRef, OnChanges, OnDestroy, SimpleChanges, ViewChild} from '@angular/core';
 import * as React from 'react';
+import {useEffect} from 'react';
 import * as ReactDOM from 'react-dom';
-import {DotAppSwitcher, DotThemeProvider} from '@digital-ai/dot-components';
+import {DotAppSwitcher, DotCoreApiProvider, DotThemeProvider, useDotCoreApiContext} from '@digital-ai/dot-components';
 
 const containerElementName = 'dotAppSwitcherContainer';
 
@@ -27,17 +28,34 @@ export class CustomReactComponentWrapperComponent implements OnChanges, OnDestro
 
     private render() {
 
-        const activeApp = {
-            name: 'Continuous Testing'
-        }
+        const OpenAppSwitcher = () => {
+            const {isAppSwitcherOpen, setIsAppSwitcherOpen, applications} = useDotCoreApiContext();
 
-        const args = {
-            open: true,
-        }
+            useEffect(() => {
+                setIsAppSwitcherOpen(true);
+            }, []);
+
+            const appSwitcherOnClick = () => {
+                setIsAppSwitcherOpen((orig) => !orig);
+            };
+
+            return (
+                <>
+                    <DotAppSwitcher includePlatformConsole={true}
+                                    activeApp={{name: 'Agile 1', product: "Agility"}}
+                                    open={true}
+                                    onClose={appSwitcherOnClick}
+                                    apps={applications}
+                                    accountId={"c390d325-1628-4c4e-a1ee-d269e025c34e"}/>
+                </>
+            );
+        };
 
         ReactDOM.render(
             <DotThemeProvider>
-                <DotAppSwitcher activeApp={activeApp} {...args}/>
+                <DotCoreApiProvider apiUrl="https://demo-mock-api">
+                    <OpenAppSwitcher/>
+                </DotCoreApiProvider>
             </DotThemeProvider>
             ,
             this.containerRef.nativeElement
