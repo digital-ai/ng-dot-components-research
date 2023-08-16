@@ -1,8 +1,7 @@
 import {AfterViewInit, Component, ElementRef, OnChanges, OnDestroy, SimpleChanges, ViewChild} from '@angular/core';
-import * as React from 'react';
-import {useEffect} from 'react';
-import * as ReactDOM from 'react-dom';
-import {DotAppSwitcher, DotCoreApiProvider, DotThemeProvider, useDotCoreApiContext} from '@digital-ai/dot-components';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {DotAppSwitcher, DotCoreApiProvider, DotThemeProvider, DotTypography, useDotCoreApiContext} from '@digital-ai/dot-components';
 
 const containerElementName = 'dotAppSwitcherContainer';
 
@@ -27,34 +26,13 @@ export class CustomReactComponentWrapperComponent implements OnChanges, OnDestro
     }
 
     private render() {
-
-        const OpenAppSwitcher = () => {
-            const {isAppSwitcherOpen, setIsAppSwitcherOpen, applications} = useDotCoreApiContext();
-
-            useEffect(() => {
-                setIsAppSwitcherOpen(true);
-            }, []);
-
-            const appSwitcherOnClick = () => {
-                setIsAppSwitcherOpen((orig) => !orig);
-            };
-
-            return (
-                <>
-                    <DotAppSwitcher includePlatformConsole={true}
-                                    activeApp={{name: 'Agile 1', product: "Agility"}}
-                                    open={true}
-                                    onClose={appSwitcherOnClick}
-                                    apps={applications}
-                                    accountId={"c390d325-1628-4c4e-a1ee-d269e025c34e"}/>
-                </>
-            );
-        };
-
+        // accountId={"c390d325-1628-4c4e-a1ee-d269e025c34e"}
         ReactDOM.render(
             <DotThemeProvider>
-                <DotCoreApiProvider apiUrl="https://demo-mock-api">
-                    <OpenAppSwitcher/>
+            <DotCoreApiProvider apiUrl="https://demo-mock-api">
+                <DotAppSwitcher
+                    activeApp={{name: 'Agile 1', product: "Agility"}}
+                />
                 </DotCoreApiProvider>
             </DotThemeProvider>
             ,
