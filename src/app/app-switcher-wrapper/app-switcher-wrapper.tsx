@@ -1,9 +1,24 @@
 import {AfterViewInit, Component, ElementRef, OnChanges, OnDestroy, SimpleChanges, ViewChild} from '@angular/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {DotAppSwitcher, DotCoreApiProvider, DotThemeProvider, DotTypography, useDotCoreApiContext} from '@digital-ai/dot-components';
+import {DotAppSwitcher, DotCoreApiProvider, DotIconButton, DotThemeProvider, DotTypography, useDotCoreApiContext} from '@digital-ai/dot-components';
 
 const containerElementName = 'dotAppSwitcherContainer';
+
+interface AppSwitcherButtonProps {
+}
+
+function AppSwitcherButton(props: AppSwitcherButtonProps) {
+  const { setIsAppSwitcherOpen } = useDotCoreApiContext();
+
+  const toggleAppSwitcher = () => {
+    setIsAppSwitcherOpen((orig) => !orig);
+  }
+  return (
+    <DotIconButton onClick={toggleAppSwitcher} iconId="apps" tooltip="Toggle app switcher" />
+  );
+}
+
 
 @Component({
     selector: 'app-switcher',
@@ -11,7 +26,6 @@ const containerElementName = 'dotAppSwitcherContainer';
 })
 export class CustomReactComponentWrapperComponent implements OnChanges, OnDestroy, AfterViewInit {
     @ViewChild(containerElementName, {static: true}) containerRef!: ElementRef;
-
 
     ngOnChanges(changes: SimpleChanges): void {
         this.render();
@@ -30,8 +44,10 @@ export class CustomReactComponentWrapperComponent implements OnChanges, OnDestro
         ReactDOM.render(
             <DotThemeProvider>
             <DotCoreApiProvider apiUrl="https://demo-mock-api">
+                <AppSwitcherButton />
                 <DotAppSwitcher
-                    activeApp={{name: 'Agile 1', product: "Agility"}}
+                  activeApp={{name: 'Agile 1', product: "Agility"}}
+                  yOffset={8}
                 />
                 </DotCoreApiProvider>
             </DotThemeProvider>

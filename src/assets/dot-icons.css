@@ -1,0 +1,1158 @@
+  @font-face {
+    font-family: 'dot';
+    src:
+      url('./fonts/dot.ttf') format('truetype'),
+      url('./fonts/dot.woff') format('woff'),
+      url('./fonts/dot.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+
+  .dot-icon {
+    align-items: center;
+    box-sizing: content-box;
+    display: flex;
+    /* allows flex items to display inline */
+    float: left;
+    font-size: 20px;
+    justify-content: center;
+  }
+
+  .dot-icon i,
+  .dot-icon i:before,
+  .dot-icon i::before {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'dot' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+
+  .dot-icon i.icon-edit-solid:before {
+  content: "\ea15";
+  }
+
+
+  .dot-icon i.icon-private:before {
+    content: "\ea0e";
+  }
+
+  .dot-icon i.icon-drip-echo:before {
+    content: '\ea0d';
+  }
+
+  .dot-icon i.icon-flow:before {
+    content: '\ea0f';
+  }
+
+  .dot-icon i.icon-applications:before {
+    content: '\ea03';
+  }
+
+  .dot-icon i.icon-migration:before {
+    content: '\ea04';
+  }
+
+  .dot-icon i.icon-cleanup:before {
+    content: '\ea05';
+  }
+
+  .dot-icon i.icon-user-add:before {
+    content: '\ea06';
+  }
+
+  .dot-icon i.icon-back-solid:before {
+    content: '\ea07';
+  }
+
+  .dot-icon i.icon-defect:before {
+    content: '\ea08';
+  }
+
+  .dot-icon i.icon-singleproject:before {
+    content: '\e9f9';
+  }
+
+  .dot-icon i.icon-share:before {
+    content: '\e9fa';
+  }
+
+  .dot-icon i.icon-requesttemplate:before {
+    content: '\e9fb';
+  }
+
+  .dot-icon i.icon-project:before {
+    content: '\e9fc';
+  }
+
+  .dot-icon i.icon-progresstracker:before {
+    content: '\e9fd';
+  }
+
+  .dot-icon i.icon-devops:before {
+    content: '\e9fe';
+  }
+
+  .dot-icon i.icon-closedproject:before {
+    content: '\e9ff';
+  }
+
+  .dot-icon i.icon-chess:before {
+    content: '\ea00';
+  }
+
+  .dot-icon i.icon-ball:before {
+    content: '\ea01';
+  }
+
+  .dot-icon i.icon-mobile:before {
+    content: '\ea02';
+  }
+
+  .dot-icon i.icon-ideaspace:before {
+    content: '\e9de';
+  }
+
+  .dot-icon i.icon-testtemplate:before {
+    content: '\e9df';
+  }
+
+  .dot-icon i.icon-regressionset:before {
+    content: '\e9e0';
+  }
+
+  .dot-icon i.icon-testset:before {
+    content: '\e9e1';
+  }
+
+  .dot-icon i.icon-forecast:before {
+    content: '\e9e2';
+  }
+
+  .dot-icon i.icon-bookmark:before {
+    content: '\e9e3';
+  }
+
+  .dot-icon i.icon-forward:before {
+    content: '\e9e4';
+  }
+
+  .dot-icon i.icon-assetapp:before {
+    content: '\e9e5';
+  }
+
+  .dot-icon i.icon-unbundle:before {
+    content: '\e9e6';
+  }
+
+  .dot-icon i.icon-stream:before {
+    content: '\e9e7';
+  }
+
+  .dot-icon i.icon-hourglass:before {
+    content: '\e9e8';
+  }
+
+  .dot-icon i.icon-support:before {
+    content: '\e9e9';
+  }
+
+  .dot-icon i.icon-trophy:before {
+    content: '\e9ea';
+  }
+
+  .dot-icon i.icon-regression:before {
+    content: '\e9eb';
+  }
+
+  .dot-icon i.icon-tasktemplate:before {
+    content: '\e9ec';
+  }
+
+  .dot-icon i.icon-defecttemplate:before {
+    content: '\e9ed';
+  }
+
+  .dot-icon i.icon-request:before {
+    content: '\e9ee';
+  }
+
+  .dot-icon i.icon-activity:before {
+    content: '\e9ef';
+  }
+
+  .dot-icon i.icon-bulb:before {
+    content: '\e9f0';
+  }
+
+  .dot-icon i.icon-wallet:before {
+    content: '\e9f1';
+  }
+
+  .dot-icon i.icon-epic:before {
+    content: '\e9f2';
+  }
+
+  .dot-icon i.icon-column-swap-right:before {
+    content: '\e9f3';
+  }
+
+  .dot-icon i.icon-column-swap-left:before {
+    content: '\e9f4';
+  }
+
+  .dot-icon i.icon-gears:before {
+    content: '\e9f5';
+  }
+
+  .dot-icon i.icon-portfolioitemtemplate:before {
+    content: '\e9f6';
+  }
+
+  .dot-icon i.icon-storytemplate:before {
+    content: '\e9f7';
+  }
+
+  .dot-icon i.icon-story:before {
+    content: '\e9f8';
+  }
+
+  .dot-icon i.icon-check-line:before {
+    content: '\e9dd';
+  }
+
+  .dot-icon i.icon-plugins:before {
+    content: '\e9dc';
+  }
+
+  .dot-icon i.icon-integrations:before {
+    content: '\e9db';
+  }
+
+  .dot-icon i.icon-line-graph:before {
+    content: '\e9d7';
+  }
+
+  .dot-icon i.icon-rocket-filled:before {
+    content: '\e9d8';
+  }
+
+  .dot-icon i.icon-circle-check-outline:before {
+    content: '\e9d9';
+  }
+
+  .dot-icon i.icon-circle-info-outline:before {
+    content: '\e9da';
+  }
+
+  .dot-icon i.icon-analytics:before {
+    content: '\e9d4';
+  }
+
+  .dot-icon i.icon-Increment:before {
+    content: '\e9d5';
+  }
+
+  .dot-icon i.icon-Portfolio:before {
+    content: '\e9d6';
+  }
+
+  .dot-icon i.icon-user-security:before {
+    content: '\e9d2';
+  }
+
+  .dot-icon i.icon-rocket:before {
+    content: '\e9d3';
+  }
+
+  .dot-icon i.icon-merge:before {
+    content: '\e9d1';
+  }
+
+  .dot-icon i.icon-cpu:before {
+    content: '\e9d0';
+  }
+
+  .dot-icon i.icon-progression:before {
+    content: '\e9cf';
+  }
+
+  .dot-icon i.icon-commit:before {
+    content: '\e95f';
+  }
+
+  .dot-icon i.icon-design:before {
+    content: '\e960';
+  }
+
+  .dot-icon i.icon-key:before {
+    content: '\e981';
+  }
+
+  .dot-icon i.icon-infrastructure:before {
+    content: '\e989';
+  }
+
+  .dot-icon i.icon-report:before {
+    content: '\e9ce';
+  }
+
+  .dot-icon i.icon-package:before {
+    content: '\e9c9';
+  }
+
+  .dot-icon i.icon-security-off:before {
+    content: '\e9ca';
+  }
+
+  .dot-icon i.icon-security-on:before {
+    content: '\e9cb';
+  }
+
+  .dot-icon i.icon-marker-check:before {
+    content: '\e9cc';
+  }
+
+  .dot-icon i.icon-restore:before {
+    content: '\e9cd';
+  }
+
+  .dot-icon i.icon-check-outlined:before {
+    content: '\e9c7';
+  }
+
+  .dot-icon i.icon-circle-half-full:before {
+    content: '\e9c8';
+  }
+
+  .dot-icon i.icon-host:before {
+    content: '\e9b9';
+  }
+
+  .dot-icon i.icon-cluster:before {
+    content: '\e9ba';
+  }
+
+  .dot-icon i.icon-environment:before {
+    content: '\e9bb';
+  }
+
+  .dot-icon i.icon-monitor-controls:before {
+    content: '\e9bc';
+  }
+
+  .dot-icon i.icon-flag:before {
+    content: '\e9bd';
+  }
+
+  .dot-icon i.icon-satelite:before {
+    content: '\e9be';
+  }
+
+  .dot-icon i.icon-satelite-group:before {
+    content: '\e9bf';
+  }
+
+  .dot-icon i.icon-monitor-gears:before {
+    content: '\e9c0';
+  }
+
+  .dot-icon i.icon-patch:before {
+    content: '\e9b6';
+  }
+
+  .dot-icon i.icon-branch:before {
+    content: '\e9b4';
+  }
+
+  .dot-icon i.icon-send-airplane:before {
+    content: '\e9b5';
+  }
+
+  .dot-icon i.icon-briefcase:before {
+    content: '\e9b7';
+  }
+
+  .dot-icon i.icon-cluster-dependencies:before {
+    content: '\e9b8';
+  }
+
+  .dot-icon i.icon-script:before {
+    content: '\e966';
+  }
+
+  .dot-icon i.icon-pattern-bundle:before {
+    content: '\e967';
+  }
+
+  .dot-icon i.icon-outline:before {
+    content: '\e968';
+  }
+
+  .dot-icon i.icon-apps:before {
+    content: '\e969';
+  }
+
+  .dot-icon i.icon-archive:before {
+    content: '\e96a';
+  }
+
+  .dot-icon i.icon-arrow-down:before {
+    content: '\e96b';
+  }
+
+  .dot-icon i.icon-arrow-right:before {
+    content: '\e96c';
+  }
+
+  .dot-icon i.icon-arrow-up:before {
+    content: '\e96d';
+  }
+
+  .dot-icon i.icon-attachment:before {
+    content: '\e96e';
+  }
+
+  .dot-icon i.icon-board:before {
+    content: '\e96f';
+  }
+
+  .dot-icon i.icon-calendar:before {
+    content: '\e970';
+  }
+
+  .dot-icon i.icon-change:before {
+    content: '\e971';
+  }
+
+  .dot-icon i.icon-chevron-right:before {
+    content: '\e972';
+  }
+
+  .dot-icon i.icon-circle-minus-outlines:before {
+    content: '\e973';
+  }
+
+  .dot-icon i.icon-circle-paused:before {
+    content: '\e974';
+  }
+
+  .dot-icon i.icon-column:before {
+    content: '\e975';
+  }
+
+  .dot-icon i.icon-comment:before {
+    content: '\e976';
+  }
+
+  .dot-icon i.icon-configuration-preferences:before {
+    content: '\e977';
+  }
+
+  .dot-icon i.icon-conversation-bubbles:before {
+    content: '\e978';
+  }
+
+  .dot-icon i.icon-dashboard:before {
+    content: '\e979';
+  }
+
+  .dot-icon i.icon-database:before {
+    content: '\e97a';
+  }
+
+  .dot-icon i.icon-delivery-eta-icon:before {
+    content: '\e97b';
+  }
+
+  .dot-icon i.icon-download:before {
+    content: '\e97c';
+  }
+
+  .dot-icon i.icon-drag:before {
+    content: '\e97d';
+  }
+
+  .dot-icon i.icon-duplicate:before {
+    content: '\e97e';
+  }
+
+  .dot-icon i.icon-exit:before {
+    content: '\e97f';
+  }
+
+  .dot-icon i.icon-expand-chevrons:before {
+    content: '\e980';
+  }
+
+  .dot-icon i.icon-expander:before {
+    content: '\e981';
+  }
+
+  .dot-icon i.icon-file-image:before {
+    content: '\e982';
+  }
+
+  .dot-icon i.icon-file-lines:before {
+    content: '\e983';
+  }
+
+  .dot-icon i.icon-file-warning:before {
+    content: '\e984';
+  }
+
+  .dot-icon i.icon-file:before {
+    content: '\e985';
+  }
+
+  .dot-icon i.icon-filter:before {
+    content: '\e986';
+  }
+
+  .dot-icon i.icon-flag-none:before {
+    content: '\e987';
+  }
+
+  .dot-icon i.icon-folder:before {
+    content: '\e988';
+  }
+
+  .dot-icon i.icon-full-screen:before {
+    content: '\e989';
+  }
+
+  .dot-icon i.icon-fullscreen-enter:before {
+    content: '\e98a';
+  }
+
+  .dot-icon i.icon-fullscreen-exit:before {
+    content: '\e98b';
+  }
+
+  .dot-icon i.icon-grid:before {
+    content: '\e98c';
+  }
+
+  .dot-icon i.icon-hard-drive:before {
+    content: '\e98d';
+  }
+
+  .dot-icon i.icon-help:before {
+    content: '\e98e';
+  }
+
+  .dot-icon i.icon-history:before {
+    content: '\e98f';
+  }
+
+  .dot-icon i.icon-inbox:before {
+    content: '\e990';
+  }
+
+  .dot-icon i.icon-link:before {
+    content: '\e991';
+  }
+
+  .dot-icon i.icon-list:before {
+    content: '\e992';
+  }
+
+  .dot-icon i.icon-lock:before {
+    content: '\e993';
+  }
+
+  .dot-icon i.icon-mail:before {
+    content: '\e994';
+  }
+
+  .dot-icon i.icon-menu:before {
+    content: '\e995';
+  }
+
+  .dot-icon i.icon-monitor-satellite:before {
+    content: '\e996';
+  }
+
+  .dot-icon i.icon-monitor:before {
+    content: '\e997';
+  }
+
+  .dot-icon i.icon-notification-bell:before {
+    content: '\e998';
+  }
+
+  .dot-icon i.icon-open-new-tab:before {
+    content: '\e999';
+  }
+
+  .dot-icon i.icon-options:before {
+    content: '\e99a';
+  }
+
+  .dot-icon i.icon-parallel:before {
+    content: '\e99b';
+  }
+
+  .dot-icon i.icon-pending-clock:before {
+    content: '\e99c';
+  }
+
+  .dot-icon i.icon-play:before {
+    content: '\e99d';
+  }
+
+  .dot-icon i.icon-redo:before {
+    content: '\e99e';
+  }
+
+  .dot-icon i.icon-refresh:before {
+    content: '\e99f';
+  }
+
+  .dot-icon i.icon-release:before {
+    content: '\e9a0';
+  }
+
+  .dot-icon i.icon-search:before {
+    content: '\e9a3';
+  }
+
+  .dot-icon i.icon-sequential:before {
+    content: '\e9a4';
+  }
+
+  .dot-icon i.icon-sort-asc:before {
+    content: '\e9a5';
+  }
+
+  .dot-icon i.icon-sort-desc:before {
+    content: '\e9a6';
+  }
+
+  .dot-icon i.icon-star-favorites-active:before {
+    content: '\e9a7';
+  }
+
+  .dot-icon i.icon-star-favorites-default:before {
+    content: '\e9a8';
+  }
+
+  .dot-icon i.icon-target:before {
+    content: '\e9a9';
+  }
+
+  .dot-icon i.icon-task:before {
+    content: '\e9aa';
+  }
+
+  .dot-icon i.icon-template:before {
+    content: '\e9ab';
+  }
+
+  .dot-icon i.icon-undo:before {
+    content: '\e9ac';
+  }
+
+  .dot-icon i.icon-unlock:before {
+    content: '\e9ad';
+  }
+
+  .dot-icon i.icon-variable:before {
+    content: '\e9ae';
+  }
+
+  .dot-icon i.icon-vault:before {
+    content: '\e9af';
+  }
+
+  .dot-icon i.icon-visibility-off:before {
+    content: '\e9b0';
+  }
+
+  .dot-icon i.icon-visibility-on:before {
+    content: '\e9b1';
+  }
+
+  .dot-icon i.icon-webhook:before {
+    content: '\e9b2';
+  }
+
+  .dot-icon i.icon-wrench:before {
+    content: '\e9b3';
+  }
+
+  .dot-icon i.icon-bright:before {
+    content: '\e961';
+  }
+
+  .dot-icon i.icon-rogue-commits:before {
+    content: '\e962';
+  }
+
+  .dot-icon i.icon-home:before {
+    content: '\e963';
+  }
+
+  .dot-icon i.icon-blocking-issues:before {
+    content: '\e964';
+  }
+
+  .dot-icon i.icon-print-link:before {
+    content: '\e965';
+  }
+
+  .dot-icon i.icon-logo-deploy:before {
+    content: '\e902';
+  }
+
+  .dot-icon i.icon-logo-experitest:before {
+    content: '\e903';
+  }
+
+  .dot-icon i.icon-logo-numerify:before {
+    content: '\e904';
+  }
+
+  .dot-icon i.icon-logo-arxan:before {
+    content: '\e905';
+  }
+
+  .dot-icon i.icon-logo-continuum:before {
+    content: '\e906';
+  }
+
+  .dot-icon i.icon-logo-versionone:before {
+    content: '\e907';
+  }
+
+  .dot-icon i.icon-logo-release:before {
+    content: '\e908';
+  }
+
+  .dot-icon i.icon-warning-solid:before {
+    content: '\e909';
+  }
+
+  .dot-icon i.icon-warning-outline:before {
+    content: '\e90a';
+  }
+
+  .dot-icon i.icon-info-solid:before {
+    content: '\e90b';
+  }
+
+  .dot-icon i.icon-minus-solid:before {
+    content: '\e90c';
+  }
+
+  .dot-icon i.icon-check-solid:before {
+    content: '\e90d';
+  }
+
+  .dot-icon i.icon-error-solid:before {
+    content: '\e90e';
+  }
+
+  .dot-icon i.icon-error-outlines:before {
+    content: '\e90f';
+  }
+
+  .dot-icon i.icon-add-outlined:before {
+    content: '\e910';
+  }
+
+  .dot-icon i.icon-add-solid:before {
+    content: '\e911';
+  }
+
+  .dot-icon i.icon-clear-solid:before {
+    content: '\e912';
+  }
+
+  .dot-icon i.icon-dark:before {
+    content: '\e913';
+  }
+
+  .dot-icon i.icon-location:before {
+    content: '\e914';
+  }
+
+  .dot-icon i.icon-roadmap:before {
+    content: '\e915';
+  }
+
+  .dot-icon i.icon-follow-solid:before {
+    content: '\e916';
+  }
+
+  .dot-icon i.icon-follow-outlined:before {
+    content: '\e917';
+  }
+
+  .dot-icon i.icon-video:before {
+    content: '\e918';
+  }
+
+  .dot-icon i.icon-thumbs-down:before {
+    content: '\e919';
+  }
+
+  .dot-icon i.icon-camera:before {
+    content: '\e91a';
+  }
+
+  .dot-icon i.icon-users:before {
+    content: '\e91b';
+  }
+
+  .dot-icon i.icon-user:before {
+    content: '\e91c';
+  }
+
+  .dot-icon i.icon-announcement:before {
+    content: '\e91d';
+  }
+
+  .dot-icon i.icon-not-allowed:before {
+    content: '\e91e';
+  }
+
+  .dot-icon i.icon-zoom-out:before {
+    content: '\e91f';
+  }
+
+  .dot-icon i.icon-zoom-in:before {
+    content: '\e920';
+  }
+
+  .dot-icon i.icon-triangle:before {
+    content: '\e921';
+  }
+
+  .dot-icon i.icon-delay:before {
+    content: '\e922';
+  }
+
+  .dot-icon i.icon-circle-outline:before {
+    content: '\e923';
+  }
+
+  .dot-icon i.icon-circle:before {
+    content: '\e924';
+  }
+
+  .dot-icon i.icon-add-from-list:before {
+    content: '\e925';
+  }
+
+  .dot-icon i.icon-sync:before {
+    content: '\e926';
+  }
+
+  .dot-icon i.icon-keyboard:before {
+    content: '\e927';
+  }
+
+  .dot-icon i.icon-planner:before {
+    content: '\e928';
+  }
+
+  .dot-icon i.icon-tag:before {
+    content: '\e929';
+  }
+
+  .dot-icon i.icon-progress:before {
+    content: '\e92a';
+  }
+
+  .dot-icon i.icon-timeline:before {
+    content: '\e92b';
+  }
+
+  .dot-icon i.icon-abort:before {
+    content: '\e92c';
+  }
+
+  .dot-icon i.icon-cancel:before {
+    content: '\e92d';
+  }
+
+  .dot-icon i.icon-power:before {
+    content: '\e92e';
+  }
+
+  .dot-icon i.icon-resize:before {
+    content: '\e92f';
+  }
+
+  .dot-icon i.icon-close:before {
+    content: '\e930';
+  }
+
+  .dot-icon i.icon-save:before {
+    content: '\e931';
+  }
+
+  .dot-icon i.icon-drag-vertical-up-down:before {
+    content: '\e932';
+  }
+
+  .dot-icon i.icon-add:before {
+    content: '\e933';
+  }
+
+  .dot-icon i.icon-minus:before {
+    content: '\e934';
+  }
+
+  .dot-icon i.icon-target-none:before {
+    content: '\e935';
+  }
+
+  .dot-icon i.icon-placeholder:before {
+    content: '\e936';
+  }
+
+  .dot-icon i.icon-server:before {
+    content: '\e937';
+  }
+
+  .dot-icon i.icon-square-wrench:before {
+    content: '\e938';
+  }
+
+  .dot-icon i.icon-square-wrench-check:before {
+    content: '\e939';
+  }
+
+  .dot-icon i.icon-square-settings:before {
+    content: '\e93a';
+  }
+
+  .dot-icon i.icon-trigger:before {
+    content: '\e93c';
+  }
+
+  .dot-icon i.icon-precondition:before {
+    content: '\e93d';
+  }
+
+  .dot-icon i.icon-composition:before {
+    content: '\e93e';
+  }
+
+  .dot-icon i.icon-block:before {
+    content: '\e93f';
+  }
+
+  .dot-icon i.icon-group:before {
+    content: '\e940';
+  }
+
+  .dot-icon i.icon-settings-admin-opaque:before {
+    content: '\e941';
+  }
+
+  .dot-icon i.icon-puzzle:before {
+    content: '\e942';
+  }
+
+  .dot-icon i.icon-alphabet-icon:before {
+    content: '\e943';
+  }
+
+  .dot-icon i.icon-crop:before {
+    content: '\e944';
+  }
+
+  .dot-icon i.icon-upload-file:before {
+    content: '\e945';
+  }
+
+  .dot-icon i.icon-container:before {
+    content: '\e946';
+  }
+
+  .dot-icon i.icon-flag-risk:before {
+    content: '\e947';
+  }
+
+  .dot-icon i.icon-learn:before {
+    content: '\e948';
+  }
+
+  .dot-icon i.icon-tree:before {
+    content: '\e949';
+  }
+
+  .dot-icon i.icon-process-template:before {
+    content: '\e94a';
+  }
+
+  .dot-icon i.icon-flag-attention:before {
+    content: '\e94b';
+  }
+
+  .dot-icon i.icon-collection:before {
+    content: '\e94c';
+  }
+
+  .dot-icon i.icon-table:before {
+    content: '\e94d';
+  }
+
+  .dot-icon i.icon-linkBrakeIt:before {
+    content: '\e94e';
+  }
+
+  .dot-icon i.icon-move-folder:before {
+    content: '\e94f';
+  }
+
+  .dot-icon i.icon-columns:before {
+    content: '\e950';
+  }
+
+  .dot-icon i.icon-file-word-doc:before {
+    content: '\e951';
+  }
+
+  .dot-icon i.icon-file-ppt:before {
+    content: '\e952';
+  }
+
+  .dot-icon i.icon-file-zip:before {
+    content: '\e953';
+  }
+
+  .dot-icon i.icon-file-xls:before {
+    content: '\e954';
+  }
+
+  .dot-icon i.icon-file-pdf:before {
+    content: '\e955';
+  }
+
+  .dot-icon i.icon-file-xml:before {
+    content: '\e956';
+  }
+
+  .dot-icon i.icon-dictionary-locked:before {
+    content: '\e957';
+  }
+
+  .dot-icon i.icon-dictionary:before {
+    content: '\e958';
+  }
+
+  .dot-icon i.icon-file-dotted:before {
+    content: '\e959';
+  }
+
+  .dot-icon i.icon-file-circle-check:before {
+    content: '\e95a';
+  }
+
+  .dot-icon i.icon-back:before {
+    content: '\e95b';
+  }
+
+  .dot-icon i.icon-chevron-left:before {
+    content: '\e95c';
+  }
+
+  .dot-icon i.icon-chevron-up:before {
+    content: '\e95d';
+  }
+
+  .dot-icon i.icon-chevron-down:before {
+    content: '\e95e';
+  }
+
+  .dot-icon i.icon-return-level-up:before {
+    content: '\e95f';
+  }
+
+  .dot-icon i.icon-return:before {
+    content: '\e960';
+  }
+
+  .dot-icon i.icon-edit:before {
+    content: '\e900';
+  }
+
+  .dot-icon i.icon-delete:before {
+    content: '\e901';
+  }
+
+  .dot-icon i.icon-settings:before {
+    content: '\e93b';
+  }
+
+  .dot-icon i.icon-network-drive:before {
+    content: '\e9a1';
+  }
+
+  .dot-icon i.icon-GitOps:before {
+    content: '\e9a2';
+  }
+
+  .dot-icon i.icon-rss:before {
+    content: '\e9c1';
+  }
+
+  .dot-icon i.icon-bug:before {
+    content: '\e9c2';
+  }
+
+  .dot-icon i.icon-cloud:before {
+    content: '\e9c3';
+  }
+
+  .dot-icon i.icon-more-horizontal:before {
+    content: '\e9c4';
+  }
+
+  .dot-icon i.icon-expand:before {
+    content: '\e9c5';
+  }
+
+  .dot-icon i.icon-collapse:before {
+    content: '\e9c6';
+  }
+
+  .icon-flow:before {
+    content: '\ea0f';
+  }
+  .icon-open-modal:before {
+    content: '\ea0a';
+  }
+  .icon-no-cloud:before {
+    content: '\ea11';
+  }
+  .icon-iteration:before {
+    content: '\ea12';
+  }
+
+  .icon-mass-edit:before {
+    content: '\ea09';
+  }
+
+  .icon-team-owner:before {
+    content: '\ea10';
+  }
+
+  .icon-edit-inline:before {
+    content: '\ea13';
+  }
+
+  .icon-quick-edit-view:before {
+    content: '\ea14';
+  }
