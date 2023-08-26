@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, OnChanges, OnDestroy, SimpleChanges, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, EventEmitter, Input, OnChanges, OnDestroy, Output, SimpleChanges, ViewChild} from '@angular/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {DotAppSwitcher, DotCoreApiProvider, DotIconButton, DotThemeProvider, DotTypography, useDotCoreApiContext} from '@digital-ai/dot-components';
@@ -6,25 +6,49 @@ import {DotAppSwitcher, DotCoreApiProvider, DotIconButton, DotThemeProvider, Dot
 const containerElementName = 'dotAppSwitcherContainer';
 
 interface AppSwitcherButtonProps {
+  iconId?: string;
+  tooltip?: string;
 }
 
-function AppSwitcherButton(props: AppSwitcherButtonProps) {
+function AppSwitcherButton({ iconId = 'apps', tooltip = "Toggle app switcher" }: AppSwitcherButtonProps) {
   const { setIsAppSwitcherOpen } = useDotCoreApiContext();
 
   const toggleAppSwitcher = () => {
     setIsAppSwitcherOpen((orig) => !orig);
   }
+
   return (
-    <DotIconButton onClick={toggleAppSwitcher} iconId="apps" tooltip="Toggle app switcher" />
+    <DotIconButton onClick={toggleAppSwitcher} iconId={iconId} tooltip={tooltip} />
   );
 }
 
+interface ActiveAppInfo {
+  name: string;
+  product?:
+    | 'Release'
+    | 'Deploy'
+    | 'Agility'
+    | 'Continuous Testing'
+    | 'Intelligence'
+    | 'Application Protection';
+}
 
 @Component({
-    selector: 'app-switcher',
+    selector: 'dot-app-switcher',
     template: `<span #${containerElementName}></span>`
 })
-export class CustomReactComponentWrapperComponent implements OnChanges, OnDestroy, AfterViewInit {
+export class DotAppSwitcherWrapperComponent implements OnChanges, OnDestroy, AfterViewInit {
+    @Input() public buttonIconId = 'apps';
+    @Input() public buttonTooltip = "Toggle app switcher";
+    @Input() public platformApi: string = 'foo';
+    @Input() public includePlatformConsole = true;
+    @Input() public yOffset = 56;
+    @Input() public zIndex = 990;
+    @Input() public activeApp: ActiveAppInfo = { name: 'Undefined', product: 'Agility'};
+    @Input() public maxRecentInstances = 5;
+    @Input() public noAppTypeLabel = 'Other';
+    @Input() public searchInstancesThreshold = 5;
+    @Output() public onClose = new EventEmitter<void>();
     @ViewChild(containerElementName, {static: true}) containerRef!: ElementRef;
 
     ngOnChanges(changes: SimpleChanges): void {
@@ -39,20 +63,31 @@ export class CustomReactComponentWrapperComponent implements OnChanges, OnDestro
         ReactDOM.unmountComponentAtNode(this.containerRef.nativeElement);
     }
 
+    handleOnClose() {
+        if (this.onClose) {
+            this.onClose.emit();
+        }
+    }
+
     private render() {
-        // accountId={"c390d325-1628-4c4e-a1ee-d269e025c34e"}
-        ReactDOM.render(
-            <DotThemeProvider>
-            <DotCoreApiProvider apiUrl="https://demo-mock-api">
-                <AppSwitcherButton />
-                <DotAppSwitcher
-                  activeApp={{name: 'Agile 1', product: "Agility"}}
-                  yOffset={8}
-                />
-                </DotCoreApiProvider>
-            </DotThemeProvider>
-            ,
-            this.containerRef.nativeElement
-        );
+      ReactDOM.render(
+        <DotThemeProvider>
+          <DotCoreApiProvider apiUrl={this.platformApi}>
+            <AppSwitcherButton iconId={this.buttonIconId} tooltip={this.buttonTooltip} />
+            <DotAppSwitcher
+              includePlatformConsole={this.includePlatformConsole}
+              yOffset={this.yOffset}
+              zIndex={this.zIndex}
+              activeApp={this.activeApp}
+              maxRecentInstances={this.maxRecentInstances}
+              noAppTypeLabel={this.noAppTypeLabel}
+              searchInstancesThreshold={this.searchInstancesThreshold}
+              onClose={this.handleOnClose}
+            />
+          </DotCoreApiProvider>
+        </DotThemeProvider>
+        ,
+        this.containerRef.nativeElement
+      );
     }
 }

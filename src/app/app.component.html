@@ -1,7 +1,11 @@
 <div class="main-page-container full-height dx-viewport">
     <header>
 <div>
-    <app-switcher></app-switcher>
+  <dot-app-switcher
+    [activeApp]="{name: 'Agile 1', product: 'Agility'}"
+    [yOffset]="8"
+    [platformApi]="'https://demo-mock-api'"
+  ></dot-app-switcher>
 </div>
 <div>Logo</div>
     </header>

@@ -6,13 +6,13 @@ import {AppComponent} from './app.component';
 import {ProductsComponent} from './products/products.component';
 import {DxDataGridModule} from 'devextreme-angular';
 import {HttpClientModule} from '@angular/common/http';
-import {CustomReactComponentWrapperComponent} from './app-switcher-wrapper/app-switcher-wrapper';
+import {DotAppSwitcherWrapperComponent} from './app-switcher-wrapper/app-switcher-wrapper';
 
 @NgModule({
     declarations: [
         AppComponent,
         ProductsComponent,
-        CustomReactComponentWrapperComponent
+        DotAppSwitcherWrapperComponent
     ],
     imports: [
         BrowserModule,
