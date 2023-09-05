@@ -18,7 +18,7 @@
     "@angular/platform-browser": "^15.2.9",
     "@angular/platform-browser-dynamic": "^15.2.9",
     "@angular/router": "^15.2.9",
-    "@digital-ai/dot-components": "file:../../dot-components/dist/libs/dot-components/digital-ai-dot-components-2.11.3.tgz",
+    "@digital-ai/dot-components": "2.14.0",
     "@digital-ai/dot-icons": "latest",
     "dayjs": "^1.11.9",
     "devextreme": "23.1.3",
