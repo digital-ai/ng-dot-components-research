@@ -6,9 +6,7 @@ import {Component} from '@angular/core';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    public counter = 678;
-
-    public handleOnChildClick(): void {
-        this.counter++;
-    }
+  authHeader = "";
+  public platformApi = this.authHeader ? "https://api.us.digital.ai" : "https://demo-mock-api";
+  public token = this.authHeader ? this.authHeader.substring(7) : "";
 }
